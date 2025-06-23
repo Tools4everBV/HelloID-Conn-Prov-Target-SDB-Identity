@@ -1,0 +1,24 @@
+[
+  {
+    "key": "AccessToken",
+    "type": "input",
+    "defaultValue": "",
+    "templateOptions": {
+      "type": "password",
+      "label": "AccessToken",
+      "description": "The access token for the SDB-Identity API.",
+      "required": true
+    }
+  },
+  {
+    "key": "BaseUrl",
+    "type": "input",
+    "defaultValue": "",
+    "templateOptions": {
+      "label": "BaseUrl",
+      "description": "The URL to the application",
+      "placeholder": "https://{environment}-sdbidentity.n",
+      "required": true
+    }
+  }
+]
