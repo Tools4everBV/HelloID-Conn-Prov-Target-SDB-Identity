@@ -5,7 +5,7 @@
 | This repository contains the connector and configuration code only. The implementer is responsible to acquire the connection details such as username, password, certificate, etc. You might even need to sign a contract or agreement with the supplier before implementing this connector. Please contact the client's application manager to coordinate the connector requirements. |
 <br />
 <p align="center">
-  <img src="https://www.tools4ever.nl/connector-logos/scim-logo-2.png">
+  <img src="https://github.com/Tools4everBV/HelloID-Conn-Prov-Target-SDBHR/blob/main/Logo.png?raw=true" alt="SDB Groep Logo">
 </p>
 
 ## Table of contents
@@ -31,7 +31,10 @@
 
 ## Introduction
 
-The _'HelloID-Conn-Prov-Target-SDB-Identity'_ connector is a target connector based on scim based API's. http://www.simplecloud.info.
+- The _'HelloID-Conn-Prov-Target-SDB-Identity'_ connector is a target connector based on scim based API's. http://www.simplecloud.info.
+
+- The SDB Identity Platform serves as the central hub for connecting and managing access to underlying applications. More information about the supported applications can be found in the [API documentation](#api-documentation)
+
 
 ## Supported  features
 
@@ -110,11 +113,15 @@ The following endpoints are used by the connector
 
 ## Getting help
 
+> _For more information on how to configure a HelloID PowerShell connector, please refer to our [documentation](https://docs.helloid.com/hc/en-us/articles/360012557600-Configure-a-custom-PowerShell-source-system) pages_
+
+## Getting help
+
 > [!TIP]
 > _For more information on how to configure a HelloID PowerShell connector, please refer to our [documentation](https://docs.helloid.com/en/provisioning/target-systems/powershell-v2-target-systems.html) pages_.
 
 > [!TIP]
->  _If you need help, feel free to ask questions on our [forum](https://forum.helloid.com/forum/helloid-connectors/provisioning/5364-helloid-conn-prov-target-sdb-identity)_.
+>  _If you need help, feel free to ask questions on our [forum](https://forum.helloid.com)_.
 
 ## HelloID docs
 
