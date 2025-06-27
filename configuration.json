@@ -17,7 +17,7 @@
     "templateOptions": {
       "label": "BaseUrl",
       "description": "The URL to the application",
-      "placeholder": "https://{environment}-sdbidentity.n",
+      "placeholder": "https://{environment}-sdbidentity.nl",
       "required": true
     }
   }
