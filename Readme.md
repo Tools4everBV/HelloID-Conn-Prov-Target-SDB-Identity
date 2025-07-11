@@ -40,22 +40,23 @@
 
 The following features are available:
 
-| Feature                             | Supported | Actions                                 | Remarks           |
-| ----------------------------------- | --------- | --------------------------------------- | ----------------- |
-| **Account Lifecycle**               | ✅         | Create, Update, Enable, Disable        | There is no Delete action, the disable acts as a soft delete |
-| **Permissions**                     | ✅         | Retrieve, Grant, Revoke                | Static or Dynamic |
-| **Resources**                       | ❌         | -                                      |                   |
-| **Entitlement Import: Accounts**    | ✅         | -                                      |                   |
-| **Entitlement Import: Permissions** | ✅         | -                                      |                   |
+| Feature                                   | Supported | Actions                         | Remarks                                                      |
+| ----------------------------------------- | --------- | ------------------------------- | ------------------------------------------------------------ |
+| **Account Lifecycle**                     | ✅         | Create, Update, Enable, Disable | There is no Delete action, the disable acts as a soft delete |
+| **Permissions**                           | ✅         | Retrieve, Grant, Revoke         | Static or Dynamic                                            |
+| **Resources**                             | ❌         | -                               |                                                              |
+| **Entitlement Import: Accounts**          | ✅         | -                               |                                                              |
+| **Entitlement Import: Permissions**       | ✅         | -                               |                                                              |
+| **Governance Reconciliation Resolutions** | ✅         | -                               |                                                              |
 
 ## Getting started
 
 ### Connection settings
 
-| Setting      | Description                                        |
-| ------------ | -------------------------------------------------- |
-| ClientID     | The ClientID for the SCIM API                      |
-| ClientSecret | The ClientSecret for the SCIM API                  |
+| Setting      | Description                                |
+| ------------ | ------------------------------------------ |
+| ClientID     | The ClientID for the SCIM API              |
+| ClientSecret | The ClientSecret for the SCIM API          |
 | Uri          | The Uri to the SCIM API. <http://some-api> |
 
 ### Correlation configuration
@@ -102,10 +103,10 @@ Not all SCIM attributes are supported; only the fields listed below are availabl
 
 The following endpoints are used by the connector
 
-| Endpoint | Description                                          |
-| -------- | ---------------------------------------------------- |
-| /Users   | Retrieve, Create and Update user information |
-| /Groups  | Retrieve group information, Add or Remove users      |
+| Endpoint | Description                                     |
+| -------- | ----------------------------------------------- |
+| /Users   | Retrieve, Create and Update user information    |
+| /Groups  | Retrieve group information, Add or Remove users |
 
 ### API documentation
 
