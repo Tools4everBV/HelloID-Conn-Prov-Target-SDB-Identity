@@ -1,5 +1,5 @@
 #################################################
-# HelloID-Conn-Prov-Target-Xedule-students-Import
+# HelloID-Conn-Prov-Target-SDB-Identity-Import
 # PowerShell V2
 #################################################
 
@@ -114,3 +114,4 @@ try {
         Write-Warning "Error at Line '$($ex.InvocationInfo.ScriptLineNumber)': $($ex.InvocationInfo.Line). Error: $($ex.Exception.Message)"
     }
 }
+
