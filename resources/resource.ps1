@@ -160,6 +160,7 @@ try {
                 $createGroupBody = [PSCustomObject]@{
                     schemas      = @("urn:ietf:params:scim:schemas:core:2.0:Group")
                     displayName = "$($resource.ExternalId) - $($resource.Name)"
+                    externalId  = "$($correlationValue)"
                 }
 
                 $createGroupSplatParams = @{
