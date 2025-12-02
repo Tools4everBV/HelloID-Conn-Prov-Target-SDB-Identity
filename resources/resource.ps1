@@ -134,7 +134,7 @@ try {
         $actionMessage = "querying group for resource: $($resource | ConvertTo-Json)"
  
         $correlationField = "externalId"
-        $correlationValue = "OE: $($resource.ExternalId)"
+        $correlationValue = "$($resource.ExternalId)"
 
         $correlatedResource = $null
         $correlatedResource = $groupsGrouped["$($correlationValue)"]
@@ -187,7 +187,7 @@ try {
                         })
                 }
                 else {
-                    Write-Warning "DryRun: Would create group with display_name [$($createGroupBody.display_name)] and external_id [$($createGroupBody.external_id)]  for resource: $($resource | ConvertTo-Json)."
+                    Write-Warning "DryRun: Would create group with display_name [$($createGroupBody.displayName)] for resource: $($resource | ConvertTo-Json)."
                 }
                 #endregion Create group
 
