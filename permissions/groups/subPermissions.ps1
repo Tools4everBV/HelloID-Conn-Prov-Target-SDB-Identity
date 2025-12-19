@@ -9,7 +9,7 @@
 # Determine all the sub-permissions that needs to be Granted/Updated/Revoked
 $currentPermissions = @{}
 foreach ($permission in $actionContext.CurrentPermissions) {
-    $currentPermissions[$permission.Name] = $permission.Value
+    $currentPermissions[$permission.Reference.Id] = $permission.DisplayName
 }
 
 #region functions
@@ -119,7 +119,7 @@ try {
                 # Get group to use objectGuid to avoid name change issues
                 $correlationField = "displayName"
                 # Example: department_<department externalId>
-                $correlationValue = "department_" + $contract.Department.ExternalId
+                $correlationValue = $contract.custom.SDBGroupName
 
                 $group = $null
                 $group = $groupsGrouped["$($correlationValue)"]
