@@ -2,11 +2,18 @@
 
 All notable changes to this project will be documented in this file. The format is based on [Keep a Changelog](https://keepachangelog.com), and this project adheres to [Semantic Versioning](https://semver.org).
 
-## [1.1.0] - 19-12-2025
+## [1.0.1] - 19-12-2025
 
 ### Added
 
-Added functionality for resource creation and subPermissions.
+- Added resource creation (resource.ps1)
+- Added subpermissions (subPermissions.ps1)
+
+### Changed
+
+### Deprecated
+
+### Removed
 
 ## [1.0.0] - 27-05-2025
 
