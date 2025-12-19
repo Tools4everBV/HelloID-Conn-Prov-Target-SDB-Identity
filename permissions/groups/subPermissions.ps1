@@ -119,7 +119,7 @@ try {
                 # Get group to use objectGuid to avoid name change issues
                 $correlationField = "displayName"
                 # Example: department_<department externalId>
-                $correlationValue = $contract.custom.SDBGroupName
+                $correlationValue = "department_" + $contract.Department.ExternalId
 
                 $group = $null
                 $group = $groupsGrouped["$($correlationValue)"]
