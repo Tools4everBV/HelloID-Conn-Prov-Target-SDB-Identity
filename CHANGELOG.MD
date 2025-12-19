@@ -14,8 +14,6 @@ Added functionality for resource creation and subPermissions.
 
 ### Removed
 
-
-
 ## [1.0.0] - 27-05-2025
 
 This is the first official release of _HelloID-Conn-Prov-Target-SDB-Identity_. This release is based on template version _v2.0.0_.
