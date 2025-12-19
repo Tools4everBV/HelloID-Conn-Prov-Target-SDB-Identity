@@ -25,4 +25,4 @@ This is the first official release of _HelloID-Conn-Prov-Target-SDB-Identity_. T
 
 ### Deprecated
 
-### Removed
+### Removed 
