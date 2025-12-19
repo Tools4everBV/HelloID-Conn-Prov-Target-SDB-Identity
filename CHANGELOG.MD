@@ -6,7 +6,9 @@ All notable changes to this project will be documented in this file. The format 
 
 This is the first official release of _HelloID-Conn-Prov-Target-SDB-Identity_. This release is based on template version _v2.0.0_.
 
-### Added
+### Added [1.0.1] - 19-12-2025
+
+Added functionality for resource creation and subpermissions.
 
 ### Changed
 
