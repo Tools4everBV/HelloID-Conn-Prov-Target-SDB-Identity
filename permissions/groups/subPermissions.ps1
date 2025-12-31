@@ -6,13 +6,17 @@
 # Enable TLS1.2
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
+# Script Mapping lookup values
+$contractCorrelationField = 'displayName'
+$contractCorrelationValue = { $_.custom.SDBGroupName }
+
 # Determine all the sub-permissions that needs to be Granted/Updated/Revoked
 $currentPermissions = @{}
 foreach ($permission in $actionContext.CurrentPermissions) {
     $currentPermissions[$permission.Reference.Id] = $permission.DisplayName
 }
 
-#region functions
+#region functions   
 function Resolve-SDB-IdentityError {
     [CmdletBinding()]
     param (
@@ -75,11 +79,9 @@ try {
         }
     }
 
-    if ($null -ne $correlatedAccount) {
-        $accountFound = $true
-    } else {
-        $accountFound = $false
-    }
+    if ($null -eq $correlatedAccount) {
+        throw 'NotFound'
+    } 
 
     Write-Information 'Retrieving permissions'
     $count = 100
@@ -117,9 +119,8 @@ try {
             Write-Information "Contract: $($contract.ExternalId). In condition: $($contract.Context.InConditions)"
             if ($contract.Context.InConditions -OR ($actionContext.DryRun -eq $true)) {        
                 # Get group to use objectGuid to avoid name change issues
-                $correlationField = "displayName"
-                # Example: department_<department externalId>
-                $correlationValue = $contract.custom.SDBGroupName
+                $correlationField = $contractCorrelationField
+                $correlationValue = $contractCorrelationValue
 
                 $group = $null
                 $group = $groupsGrouped["$($correlationValue)"]

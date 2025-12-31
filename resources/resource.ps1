@@ -7,6 +7,10 @@
 # Enable TLS1.2
 [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor [System.Net.SecurityProtocolType]::Tls12
 
+# Script Mapping lookup values
+$resourceCorrelationField = "externalId"
+$resourceCorrelationValue = { $($resource.ExternalId) }
+
 #region functions
 function Resolve-SDB-IdentityError {
     [CmdletBinding()]
@@ -133,8 +137,8 @@ try {
         #region get group for resource
         $actionMessage = "querying group for resource: $($resource | ConvertTo-Json)"
  
-        $correlationField = "externalId"
-        $correlationValue = "$($resource.ExternalId)"
+        $correlationField = $resourceCorrelationField
+        $correlationValue = $resourceCorrelationValue
 
         $correlatedResource = $null
         $correlatedResource = $groupsGrouped["$($correlationValue)"]
