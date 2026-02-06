@@ -1,5 +1,8 @@
 # HelloID-Conn-Prov-Target-SDB-Identity
 
+> [!IMPORTANT]
+> Account provisioning is only performed in SDB Identity (including permissions). It's important to note that provisioned users are not provisioned in the underlying applications (e.g. ECD, Planning, Leerplatform, and HR). The most common way to create users or employees in the underlying application is by using a sync from HR. Please contact SDB for more information.
+
 | :information_source: Information                                                                                                                                                                                                                                                                                                                                                       |
 | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | This repository contains the connector and configuration code only. The implementer is responsible to acquire the connection details such as username, password, certificate, etc. You might even need to sign a contract or agreement with the supplier before implementing this connector. Please contact the client's application manager to coordinate the connector requirements. |
@@ -83,6 +86,7 @@ The account reference is populated with the property `id` property from SDB-Iden
 ## Remarks
 - The employee number may only contain numeric values and no letters.
 - Usernames should consist of a single, continuous string without spaces.
+- The User object returned by the API differs from the one used in the field mapping. As a result, the create, update, and import actions require duplicate mappings to ensure proper data handling.
 - The User object returned by the API differs from the one used in the field mapping. As a result, the create, update, and import actions require duplicate mappings to ensure proper data handling.
   
 ### Supported SCIM Attributes
