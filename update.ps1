@@ -102,7 +102,7 @@ try {
                 'Username'         = 'userName'
                 'employeeNumber'   = 'urn:ietf:params:scim:schemas:extension:enterprise:2.0:User:employeeNumber'
                 'NameFormatted'    = 'name.formatted'
-                'EmailAddress'     = 'emails.value'
+                'EmailAddress'     = 'emails[type eq "work"].value'
                 'IsEmailPrimary'   = 'emails.primary'
                 'EmailAddressType' = 'emails.type'
             }
